@@ -1,0 +1,23 @@
+import torch
+from torch.utils.data import Dataset
+
+
+class WaterDataset(Dataset):
+    def __init__(self, dataframe):
+        super().__init__()
+
+        self.features = torch.tensor(
+            dataframe.drop(columns="Potability").values,
+            dtype=torch.float32
+        )
+
+        self.labels = torch.tensor(
+            dataframe["Potability"].values,
+            dtype=torch.float32
+        )
+
+    def __len__(self):
+        return len(self.labels)
+
+    def __getitem__(self, idx):
+        return self.features[idx], self.labels[idx]

@@ -1,0 +1,21 @@
+{
+    "model": "BatchNorm DNN",
+    "accuracy": 0.6560636182902585,
+    "precision": 0.6434782608695652,
+    "recall": 0.3592233009708738,
+    "f1": 0.46105919003115264,
+    "macro_f1": 0.6042522227528025,
+    "roc_auc": 0.6684645810859403,
+    "confusion_matrix": [
+        [
+            256,
+            41
+        ],
+        [
+            132,
+            74
+        ]
+    ],
+    "test_samples": 503,
+    "classification_threshold": 0.5
+}
